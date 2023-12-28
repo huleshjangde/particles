@@ -96,13 +96,7 @@ function App() {
                 detectRetina: true,
               }),
             []
-        ),
-        lightTheme = () => {
-            containerRef.current?.loadTheme("light");
-        },
-        darkTheme = () => {
-            containerRef.current?.loadTheme("dark");
-        };
+        )
 
     return (
         <div className="App">

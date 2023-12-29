@@ -20,10 +20,10 @@ function App() {
     }, [ init ]);
 
     const particlesLoaded = useCallback(
-            container => {
+            (container:any) => {
                 containerRef.current = container;
 
-                window.particlesContainer = container;
+               ( window as any).particlesContainer = container;
             },
             [ containerRef ]
         ),
@@ -115,8 +115,8 @@ function App() {
             {init && (
                 <Particles
                     id="tsparticles"
-                    particlesLoaded={particlesLoaded}
-                    options={options}
+                    particlesLoaded={particlesLoaded as any}
+                    options={options as any}
                 />
             )}
         </div>
